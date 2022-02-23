@@ -1,3 +1,5 @@
-export const addBook = payload => ({
-    type: "ADDBOOK"
+const addBook = () => ({
+  type: 'ADDBOOK',
 });
+
+export default addBook;
