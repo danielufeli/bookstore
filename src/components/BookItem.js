@@ -1,7 +1,7 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/books';
+import { removeBookCall } from '../redux/books/books';
 
 const BookItem = ({
   book: { id, category, title },
@@ -18,7 +18,7 @@ const BookItem = ({
         <div className="footer-menu">
           <ul>
             <li>Comments</li>
-            <li><button type="button" onClick={() => dispatch(removeBook(id))}> Remove </button></li>
+            <li><button type="button" onClick={() => dispatch(removeBookCall(id))}> Remove </button></li>
             <li>Edits</li>
           </ul>
         </div>

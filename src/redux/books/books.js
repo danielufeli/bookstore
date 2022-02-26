@@ -37,10 +37,10 @@ const reducer = (state = initialState, action) => {
 export default reducer;
 
 const appId = 'vxVZbm4frxeaYqc1XOCg';
-const url = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${appId}`;
+const url = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${appId}/books`;
 
 export const getBooks = () => async (dispatch) => {
-  const response = await fetch(`${url}/books`);
+  const response = await fetch(url);
   const data = await response.json();
   const books = Object.entries(data).map(([key, value]) => ({
     id: key,
@@ -51,12 +51,24 @@ export const getBooks = () => async (dispatch) => {
 };
 
 export const addBookApi = (payload) => async (dispatch) => {
-  const data = await fetch(`${url}/books`, {
+  const data = await fetch(url, {
     method: 'POST',
     body: JSON.stringify(payload),
     headers: { 'Content-type': 'application/JSON' },
   });
   if (data.status === 201) {
     dispatch(addBook(payload));
+  }
+};
+
+export const removeBookCall = (id) => async (dispatch) => {
+  const body = { item_id: id };
+  const data = await fetch(`${url}/${id}`, {
+    method: 'DELETE',
+    body: JSON.stringify(body),
+    headers: { 'Content-type': 'application/JSON' },
+  });
+  if (data.status === 201) {
+    dispatch(removeBook(id));
   }
 };
