@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 
-const categories = [
+const initialState = [
   {
     id: uuidv4(),
     name: 'Action',
@@ -15,4 +15,11 @@ const categories = [
   },
 ];
 
-export default categories;
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    default:
+      return state;
+  }
+};
+
+export default reducer;
