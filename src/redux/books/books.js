@@ -49,3 +49,14 @@ export const getBooks = () => async (dispatch) => {
   }));
   dispatch(getBooksSuccess(books));
 };
+
+export const addBookApi = (payload) => async (dispatch) => {
+  const data = await fetch(`${url}/books`, {
+    method: 'POST',
+    body: JSON.stringify(payload),
+    headers: { 'Content-type': 'application/JSON' },
+  });
+  if (data.status === 201) {
+    dispatch(addBook(payload));
+  }
+};
