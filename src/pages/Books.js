@@ -4,13 +4,12 @@ import AddBook from '../components/AddBook';
 import AllBook from '../components/AllBooks';
 
 const Books = () => {
-  const categories = useSelector((state) => state.categories, shallowEqual);
-  const books = useSelector((state) => state.books, shallowEqual);
+  const categories = useSelector((state) => state.categoriesReducer, shallowEqual);
 
   return (
     <>
       <div>
-        <AllBook books={books} />
+        <AllBook />
         <AddBook categories={categories} />
       </div>
     </>
