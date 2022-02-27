@@ -8,7 +8,7 @@ const Books = () => {
 
   return (
     <>
-      <div>
+      <div className="all-books">
         <AllBook />
         <AddBook categories={categories} />
       </div>
