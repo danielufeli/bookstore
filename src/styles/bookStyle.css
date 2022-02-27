@@ -1,0 +1,135 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  gap: 0.938rem;
+  padding-top: 2.375rem;
+  margin: 0 auto 2.5rem;
+  width: 83%;
+}
+
+.book li {
+  list-style-type: none;
+  border: 1px solid #e8e8e8;
+  padding-left: 1.688rem;
+  border-radius: 4px;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+}
+
+.category {
+  margin-top: 2rem;
+  opacity: 0.5;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #1e1e1e;
+}
+
+.title {
+  margin-top: 0.188rem;
+  font-family: RobotoSlab, sans-serif;
+  font-size: 1.375rem;
+  font-weight: bold;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+.btn {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #4386bf;
+  border: none;
+  background-color: #fff;
+  border-right: 1px solid #0290ff;
+  width: 100px;
+  height: 30px;
+}
+
+.btn:nth-of-type(2) {
+  padding-left: 1.063rem;
+}
+
+.btn:nth-of-type(3) {
+  border: none;
+  padding-left: 1.063rem;
+}
+
+hr {
+  color: #e8e8e8;
+  margin: auto;
+  width: 85%;
+}
+
+.add-book {
+  margin: 1.813rem 0 1.188rem;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+.progress-section {
+  display: flex;
+}
+
+.book-oval {
+  display: flex;
+  gap: 1.313rem;
+  border-right: 1px solid #c4c4c4;
+  margin: 3.125rem 3.688rem 0 0;
+  height: 4.375rem;
+}
+
+.percent {
+  height: 2.438rem;
+  margin: 0.063rem 5.75rem 0 0.688rem;
+  font-family: Montserrat, sans-serif;
+  font-size: 2rem;
+  color: #121212;
+}
+
+.completed {
+  height: 1.125rem;
+  margin: 0.438rem 4.938rem 0.75rem 0.75rem;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.875rem;
+  color: #c4c4c4;
+}
+
+.chapter {
+  margin: 2.038rem 0 2.1888rem;
+}
+
+.current-chapter {
+  font-family: RobotoSlab, sans-serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  color: #c4c4c4;
+  text-transform: uppercase;
+}
+
+.chapter-number {
+  margin: 0.438rem 0 0.25rem;
+  font-family: RobotoSlab, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: -0.4px;
+  color: #121212;
+}
+
+.bar-p {
+  width: 70px;
+  height: 70px;
+}
+
+.b-width {
+  width: 70px;
+}

@@ -40,13 +40,13 @@ const AddBook = ({ categories }) => {
   const { title, category } = bookState;
   return (
     <>
-      <div>
-        <h1>Add New Book</h1>
+      <div className="add-form">
+        <h1 className="title-books">Add New Book</h1>
         <form>
           <input type="text" name="title" value={title} onChange={onChange} placeholder="Book Title" />
           <select value={category} name="category" onChange={onChange}>
-            <option value="Category" disabled>
-              Category
+            <option value="" disabled>
+              Choose Category
             </option>
             {
               categories
