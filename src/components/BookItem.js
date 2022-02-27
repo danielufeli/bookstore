@@ -1,7 +1,9 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 import { useDispatch } from 'react-redux';
+import { CircularProgressbar } from 'react-circular-progressbar';
 import { removeBookCall } from '../redux/books/books';
+import 'react-circular-progressbar/dist/styles.css';
 
 const BookItem = ({
   book: { id, category, title },
@@ -10,28 +12,31 @@ const BookItem = ({
   return (
 
     <>
-      <div className="book-panel">
-        <div className="left-side">
-          <span>{category}</span>
-          <h1>{title}</h1>
+      <li>
+        <div>
+          <h3 className="category">{category}</h3>
+          <h2 className="title">{title}</h2>
+          <button type="button" className="btn"> Comment </button>
+          <button type="button" className="btn" onClick={() => dispatch(removeBookCall(id))}> Remove </button>
+          <button type="button" className="btn"> Edit </button>
         </div>
-        <div className="footer-menu">
-          <ul>
-            <li>Comments</li>
-            <li><button type="button" onClick={() => dispatch(removeBookCall(id))}> Remove </button></li>
-            <li>Edits</li>
-          </ul>
+        <div className="progress-section">
+          <div className="book-oval">
+            <div className="bar-p">
+              <CircularProgressbar value="70" />
+            </div>
+            <div>
+              <h2 className="percent">70%</h2>
+              <span className="completed">Completed</span>
+            </div>
+          </div>
+          <div className="chapter">
+            <p className="current-chapter">Current Chapter</p>
+            <p className="chapter-number">Chapter 17</p>
+            <button type="button" style={{ width: '150px' }}>Update Progress</button>
+          </div>
         </div>
-        <div className="progress">
-          <span className="oval" />
-          <p>0% Completed</p>
-        </div>
-        <div className="right-side">
-          <span>CURRENT CHAPTER</span>
-          <h2>Introduction</h2>
-          <button type="button">UPDATE PROGRESS</button>
-        </div>
-      </div>
+      </li>
     </>
   );
 };

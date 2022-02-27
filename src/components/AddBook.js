@@ -45,8 +45,8 @@ const AddBook = ({ categories }) => {
         <form>
           <input type="text" name="title" value={title} onChange={onChange} placeholder="Book Title" />
           <select value={category} name="category" onChange={onChange}>
-            <option value="Category" disabled>
-              Category
+            <option value="" disabled>
+              Choose Category
             </option>
             {
               categories

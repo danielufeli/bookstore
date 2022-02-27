@@ -38,7 +38,7 @@ form {
 
 input {
   flex-grow: 1;
-  height: 2.5rem;
+  height: 2.8rem;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: #fff;
@@ -56,17 +56,6 @@ select {
 
 .add-form {
   margin: 2.313rem 6.25rem 0;
-}
-
-.footer-menu li {
-  list-style-type: none;
-  border: 1px solid #e8e8e8;
-  padding-left: 1.688rem;
-  border-radius: 4px;
-  background-color: #fff;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  align-items: center;
 }
 
 button {
